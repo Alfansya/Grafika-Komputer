@@ -2,6 +2,9 @@
 
 Application::Application()
 {
+	for (int i = 0; i < 4; i++) {
+		lampStatus[i] = true; // Semua lampu menyala pada awalnya
+	}
 	angle = 0;
 }
 
@@ -74,6 +77,18 @@ void Application::Render()
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	glEnable(GL_DEPTH_TEST);
+
+	//door
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(-12.41f, 0.32f, -2.0f);
+	cube->SetScale(0.2f, 3.0f, 1.5f);
+	cube->Draw();
+
+	//doorknob
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-12.35f, 0.35f, -1.5f);
+	cube->SetScale(0.15f, 0.15f, 0.15f);
+	cube->Draw();
 
 	// Seat
 	cube->SetColor(204.0f, 153.0f, 102.0f);
@@ -235,14 +250,87 @@ void Application::Render()
 
 	//glass
 	cube->SetColor(255.0f, 255.0f, 255.0f);
-	cube->SetPosition(12.5f, 3.4f, 0.0f);
-	cube->SetScale(0.05f, 2.5f, 3.0f);
+	cube->SetPosition(12.4f, 3.4f, 0.0f);
+	cube->SetScale(0.09f, 2.5f, 3.0f);
 	cube->Draw();
+
+	//barglass front
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 8.5f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Mid
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 10.0f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Mid
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 10.0f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
+	cube->Draw();
+
+	//barglass Back
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 11.5f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Top
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 4.6f, 10.0f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
+	cube->Draw();
+
+	//barglass Bikini Bottom
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 2.1f, 10.0f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
+	cube->Draw();
+
 
 	//glass
 	cube->SetColor(255.0f, 255.0f, 255.0f);
-	cube->SetPosition(12.5f, 3.4f, 10.0f);
-	cube->SetScale(0.05f, 2.5f, 3.0f);
+	cube->SetPosition(12.4f, 3.4f, 10.0f);
+	cube->SetScale(0.09f, 2.5f, 3.0f);
+	cube->Draw();
+
+	//barglass front
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, -1.5f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Mid
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 0.0f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Mid
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 0.0f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
+	cube->Draw();
+
+	//barglass Back
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 3.4f, 1.5f);
+	cube->SetScale(0.1f, 2.5f, 0.1f);
+	cube->Draw();
+
+	//barglass Top
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 4.7f, 0.00f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
+	cube->Draw();
+
+	//barglass Bikini Bottom
+	cube->SetColor(92.0f, 51.0f, 23.0f);
+	cube->SetPosition(12.4f, 2.1f, 0.00f);
+	cube->SetScale(0.1f, 0.1f, 3.1f);
 	cube->Draw();
 
 	//wardobe
@@ -295,11 +383,155 @@ void Application::Render()
 
 	//Pluto Projector
 	cube->SetColor(0.0f, 0.0f, 0.0f);
-	cube->SetPosition(-7.45f, 4.2f, 1.17f);
+	cube->SetPosition(-7.45f, 4.12f, 1.17f);
 	cube->SetScale(0.4f, 0.4f, 0.4f);
 	cube->Draw();
 
+	//Pluto Projector
+	cube->SetColor	(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-7.58f, 3.71f, 1.17f);
+	cube->SetScale(0.2f, 0.1f, 0.1f);
+	cube->Draw();
 
+	//Pluto Projector
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-6.50f, 3.71f, 1.17f);
+	cube->SetScale(0.2f, 0.1f, 0.1f);
+	cube->Draw();
+
+	//Pluto Projector
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-7.58f, 3.71f, 2.30f);
+	cube->SetScale(0.2f, 0.1f, 0.1f);
+	cube->Draw();
+
+	//Pluto Projector
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-6.50f, 3.71f, 2.30f);
+	cube->SetScale(0.2f, 0.1f, 0.1f);
+	cube->Draw();
+
+	//lamp1
+	if (lampStatus[0]) {
+		cube->SetColor(255, 255, 0); // Warna lampu menyala
+	}
+	else {
+		cube->SetColor(255, 255, 255); // Warna lampu mati
+	}
+	cube->SetPosition(-3.50f, 6.55f, 2.50f);
+	cube->SetScale(0.4f, 0.7f, 0.4f);
+	cube->Draw();
+
+	//lamp2
+	if (lampStatus[0]) {
+		cube->SetColor(255, 255, 0); // Warna lampu menyala
+	}
+	else {
+		cube->SetColor(255, 255, 255); // Warna lampu mati
+	}
+	cube->SetPosition(5.50f, 6.55f, 2.50f);
+	cube->SetScale(0.4f, 0.7f, 0.4f);
+	cube->Draw();
+
+	//lamp3
+	if (lampStatus[0]) {
+		cube->SetColor(255, 255, 0); // Warna lampu menyala
+	}
+	else {
+		cube->SetColor(255, 255, 255); // Warna lampu mati
+	}
+	cube->SetPosition(-3.50f, 6.55f, 13.50f);
+	cube->SetScale(0.4f, 0.7f, 0.4f);
+	cube->Draw();
+
+	//lamp4
+	if (lampStatus[0]) {
+		cube->SetColor(255, 255, 0); // Warna lampu menyala
+	}
+	else {
+		cube->SetColor(255, 255, 255); // Warna lampu mati
+	}
+	cube->SetPosition(5.50f, 6.55f, 13.50f);
+	cube->SetScale(0.4f, 0.7f, 0.4f);
+	cube->Draw();
+
+	//bar
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-7.0f, 6.45f, 8.55f);
+	cube->SetScale(0.15f, 1.0f, 0.15f);
+	cube->Draw();
+
+	//bar
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(-7.0f, 5.95f, 8.55f);
+	cube->SetScale(0.6f, 0.1f, 0.6f);
+	cube->Draw();
+
+	//fanbase1
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(-5.98f, 5.94f, 8.55f);
+	cube->SetScale(2.0f, 0.03f, 0.5f);
+	cube->Draw();
+
+	//fanbase2
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(-7.00f, 5.94f, 7.25f);
+	cube->SetScale(0.5f, 0.03f, 2.0f);
+	cube->Draw();
+
+	//fanbase3
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(-8.20f, 5.94f, 8.55f);
+	cube->SetScale(2.0f, 0.03f, 0.5f);
+	cube->Draw();
+
+	//fanbase4
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(-7.00f, 5.94f, 9.8f);
+	cube->SetScale(0.5f, 0.03f, 2.0f);
+	cube->Draw();
+
+	//bar
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(7.0f, 6.45f, 8.55f);
+	cube->SetScale(0.15f, 1.0f, 0.15f);
+	cube->Draw();
+
+	//bar
+	cube->SetColor(0.0f, 0.0f, 0.0f);
+	cube->SetPosition(7.0f, 5.95f, 8.55f);
+	cube->SetScale(0.6f, 0.1f, 0.6f);
+	cube->Draw();
+
+	//fanbase1
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(5.98f, 5.94f, 8.55f);
+	cube->SetScale(2.0f, 0.03f, 0.5f);
+	cube->Draw();
+
+	//fanbase2
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(7.00f, 5.94f, 7.25f);
+	cube->SetScale(0.5f, 0.03f, 2.0f);
+	cube->Draw();
+
+	//fanbase3
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(8.20f, 5.94f, 8.55f);
+	cube->SetScale(2.0f, 0.03f, 0.5f);
+	cube->Draw();
+
+	//fanbase4
+	cube->SetColor(166.0f, 166.0f, 162.0f);
+	cube->SetPosition(7.00f, 5.94f, 9.8f);
+	cube->SetScale(0.5f, 0.03f, 2.0f);
+	cube->Draw();
+
+	glm::vec3 lightPos = glm::vec3(4, 4, 0);
+	shader->setVec3("lightPos", lightPos);
+	shader->setVec3("viewPos", viewPos);
+	glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 1.0f) * lightIntensity;
+	shader->setVec3("lightColor", lightColor);
 
 
 
@@ -378,13 +610,27 @@ void Application::ProcessInput(GLFWwindow* window)
 		viewPos += glm::normalize(glm::cross(viewDir, glm::vec3(0.0f, 1.0f, 0.0f))) * fixedMovementSpeed;
 
 
-	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS && lastLightToggled > 200) {
-		lampOn = !lampOn;
+	if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS && lastLightToggled > 200)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			lampStatus[i] = !lampStatus[i]; // Toggle status lampu
+		}
+
+		lightIntensity += 0.5f; // Atur nilai peningkatan sesuai kebutuhan
+
 		lastLightToggled = 0;
 	}
 
-	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS && lastLightToggled > 200) {
-		skyOn = !skyOn;
+	if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS && lastLightToggled > 200)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			lampStatus[i] = !lampStatus[i]; // Toggle status lampu
+		}
+
+		lightIntensity -= 0.5f; // Atur nilai peningkatan sesuai kebutuhan
+
 		lastLightToggled = 0;
 	}
 }
