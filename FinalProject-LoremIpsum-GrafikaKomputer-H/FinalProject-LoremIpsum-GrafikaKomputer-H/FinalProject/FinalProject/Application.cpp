@@ -90,114 +90,531 @@ void Application::Render()
 	cube->SetScale(0.15f, 0.15f, 0.15f);
 	cube->Draw();
 
-	// Seat
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(0.0f, -0.3f, 0.0f);
-	cube->SetScale(1.0f, 0.1f, 1.0f);
-	cube->Draw();
+	// Row 1
+	for (int i = 0; i < 2; ++i) {
+		// Table Top
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(0.70f + (i * 4), 0.1f, -1.3f);
+		cube->SetScale(3.35f, 0.2f, 1.1f);
+		cube->Draw();
 
-	// Backrest
-	//cube->SetColor(255.0f, 255.0f, 255.0f);
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(0.0f, 0.4f, 0.45f);
-	cube->SetScale(1.0f, 0.5f, 0.1f);
-	cube->Draw();
+		// Table Front Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, -1.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
 
-	// Front Right Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(0.45f, -0.4f, 0.45f);
-	cube->SetScale(0.1f, 1.2f, 0.1f);
-	cube->Draw();
+		// Table Back Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, -0.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
 
-	// Front Left Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(-0.45f, -0.4f, 0.45f);
-	cube->SetScale(0.1f, 1.2f, 0.1f);
-	cube->Draw();
+		// Table Back Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, -0.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
 
-	// Back Right Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(0.45f, -0.7f, -0.45f);
-	cube->SetScale(0.1f, 0.7f, 0.1f);
-	cube->Draw();
+		// Table Front Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, -1.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
 
-	// Back Left Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(-0.45f, -0.7f, -0.45f);
-	cube->SetScale(0.1f, 0.7f, 0.1f);
-	cube->Draw();
+		// Seat
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), -0.3f, 0.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
 
-	// Seat
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.5f, -0.3f, 0.0f);
-	cube->SetScale(1.0f, 0.1f, 1.0f);
-	cube->Draw();
+		// Backrest
+		//cube->SetColor(255.0f, 255.0f, 255.0f);
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), 0.4f, 0.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
 
-	// Backrest
-	//cube->SetColor(255.0f, 255.0f, 255.0f);
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.5f, 0.4f, 0.45f);
-	cube->SetScale(1.0f, 0.5f, 0.1f);
-	cube->Draw();
+		// Front Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.4f, 0.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
 
-	// Front Right Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.05f, -0.4f, 0.45f);
-	cube->SetScale(0.1f, 1.2f, 0.1f);
-	cube->Draw();
+		// Front Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.4f, 0.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
 
-	// Front Left Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.95f, -0.4f, 0.45f);
-	cube->SetScale(0.1f, 1.2f, 0.1f);
-	cube->Draw();
+		// Back Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.7f, -0.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
 
-	// Back Right Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.05f, -0.7f, -0.45f);
-	cube->SetScale(0.1f, 0.7f, 0.1f);
-	cube->Draw();
+		// Back Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.7f, -0.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
 
-	// Back Left Leg
-	cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(1.95f, -0.7f, -0.45f);
-	cube->SetScale(0.1f, 0.7f, 0.1f);
-	cube->Draw();
+		// Seat 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), -0.3f, 0.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
 
-	// Seat
-	//cube->SetColor(255.0f, 255.0f, 255.0f);
-	cube->SetColor(92.0f, 51.0f, 23.0f);
-	cube->SetPosition(0.70f, 0.1f, -1.3f);
-	cube->SetScale(3.35f, 0.2f, 1.1f);
-	cube->Draw();
+		// Backrest 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), 0.4f, 0.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
 
-	// Front Left Leg
-	cube->SetColor(92.0f, 51.0f, 23.0f);
-	//cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(2.19f, -0.41f, -1.75f);
-	cube->SetScale(0.2f, 1.2f, 0.15f);
-	cube->Draw();
+		// Front Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.4f, 0.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
 
-	// Back Left Leg
-	cube->SetColor(92.0f, 51.0f, 23.0f); 
-	//cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(2.19f, -0.41f, -0.90f);
-	cube->SetScale(0.2f, 1.2f, 0.15f);
-	cube->Draw();
+		// Front Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.4f, 0.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
 
-	// Back Right Leg
-	cube->SetColor(92.0f, 51.0f, 23.0f); 
-	//cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(-0.80f, -0.41f, -0.90f);
-	cube->SetScale(0.2f, 1.2f, 0.15f);
-	cube->Draw();
+		// Back Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.7f, -0.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
 
-	// Front Right Leg
-	cube->SetColor(92.0f, 51.0f, 23.0f); 
-	//cube->SetColor(204.0f, 153.0f, 102.0f);
-	cube->SetPosition(-0.80f, -0.41f, -1.75f);
-	cube->SetScale(0.2f, 1.2f, 0.15f);
-	cube->Draw();
+		// Back Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.7f, -0.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+	}
+
+	for (int i = 0; i < 2; ++i) {
+		// Table Top
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(0.70f + (i * 4), 0.1f, 2.3f);
+		cube->SetScale(3.35f, 0.2f, 1.1f);
+		cube->Draw();
+
+		// Table Front Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 2.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 1.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 1.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Front Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 2.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Seat
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), -0.3f, 4.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest
+		//cube->SetColor(255.0f, 255.0f, 255.0f);
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), 0.4f, 4.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.4f, 4.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.4f, 4.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.7f, 3.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.7f, 3.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Seat 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), -0.3f, 4.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), 0.4f, 4.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.4f, 4.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.4f, 4.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.7f, 3.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.7f, 3.45f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+	}
+
+	for (int i = 0; i < 2; ++i) {
+		// Table Top
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(0.70f + (i * 4), 0.1f, 6.3f);
+		cube->SetScale(3.35f, 0.2f, 1.1f);
+		cube->Draw();
+
+		// Table Front Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 6.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 5.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 5.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Front Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 6.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Seat
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), -0.3f, 8.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest
+		//cube->SetColor(255.0f, 255.0f, 255.0f);
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), 0.4f, 8.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.4f, 8.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.4f, 8.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.7f, 7.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.7f, 7.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Seat 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), -0.3f, 8.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), 0.4f, 8.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.4f, 8.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.4f, 8.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.7f, 7.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.7f, 7.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+	}
+
+	for (int i = 0; i < 2; ++i) {
+		// Table Top
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(0.70f + (i * 4), 0.1f, 9.3f);
+		cube->SetScale(3.35f, 0.2f, 1.1f);
+		cube->Draw();
+
+		// Table Front Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 9.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 8.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 8.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Front Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 9.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Seat
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), -0.3f, 11.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest
+		//cube->SetColor(255.0f, 255.0f, 255.0f);
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), 0.4f, 11.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.4f, 11.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.4f, 11.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.7f, 10.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.7f, 10.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Seat 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), -0.3f, 11.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), 0.4f, 11.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.4f, 11.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.4f, 11.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.7f, 10.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.7f, 10.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+	}
+
+	for (int i = 0; i < 2; ++i) {
+		// Table Top
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(0.70f + (i * 4), 0.1f, 12.3f);
+		cube->SetScale(3.35f, 0.2f, 1.1f);
+		cube->Draw();
+
+		// Table Front Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 12.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Left Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(2.19f + (i * 4), -0.41f, 11.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Back Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 11.90f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Table Front Right Leg
+		cube->SetColor(92.0f, 51.0f, 23.0f);
+		cube->SetPosition(-0.80f + (i * 4), -0.41f, 12.75f);
+		cube->SetScale(0.2f, 1.2f, 0.15f);
+		cube->Draw();
+
+		// Seat
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), -0.3f, 14.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest
+		//cube->SetColor(255.0f, 255.0f, 255.0f);
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.0f + (i * 4), 0.4f, 14.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.4f, 14.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.4f, 14.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(0.45f + (i * 4), -0.7f, 13.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(-0.45f + (i * 4), -0.7f, 13.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Seat 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), -0.3f, 14.0f);
+		cube->SetScale(1.0f, 0.1f, 1.0f);
+		cube->Draw();
+
+		// Backrest 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.5f + (i * 4), 0.4f, 14.45f);
+		cube->SetScale(1.0f, 0.5f, 0.1f);
+		cube->Draw();
+
+		// Front Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.4f, 14.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Front Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.4f, 14.45f);
+		cube->SetScale(0.1f, 1.2f, 0.1f);
+		cube->Draw();
+
+		// Back Right Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.05f + (i * 4), -0.7f, 13.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+
+		// Back Left Leg 2
+		cube->SetColor(204.0f, 153.0f, 102.0f);
+		cube->SetPosition(1.95f + (i * 4), -0.7f, 13.55f);
+		cube->SetScale(0.1f, 0.7f, 0.1f);
+		cube->Draw();
+	}
 
 	//WhiteBoard
 	cube->SetColor(255.0f, 255.0f, 255.0f);
@@ -639,7 +1056,7 @@ void Application::ProcessInput(GLFWwindow* window)
 
 int main(int argc, char** argv) {
 	Application app = Application();
-	app.Start("Cube Example",
+	app.Start("Classroom",
 		1366, 768,
 		false,
 		false);
