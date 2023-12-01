@@ -27,18 +27,17 @@ private:
 	virtual void ProcessInput(GLFWwindow* window);
 	const int windowWidth = 1280;
 	const int windowHeight = 768;
-	glm::vec3 entityPosition = glm::vec3(0.0f, 0.0f, 0.0f);
 	float movementSpeed = 5.0f;
-	bool lampOn = true;
-	bool skyOn = true;
-	double lastLightToggled = 0;
-	// Tambahkan variabel anguler untuk mengontrol orientasi kamera
 	float yaw = -90.0f;
 	float pitch = 0.0f;
-	glm::vec3 viewDir = glm::vec3(0.0f, 0.0f, -1.0f); // Vektor arah pandangan kamera
-
-	bool firstMouse = true;
 	float lastX = windowWidth / 2.0f;
 	float lastY = windowHeight / 2.0f;
+	float lightIntensity = 1.0f;
+	glm::vec3 viewDir = glm::vec3(0.0f, 0.0f, -1.0f);
+	glm::vec3 lampPosition = glm::vec3(5.0f, 6.0f, 2.5f);
+	glm::vec3 entityPosition = glm::vec3(0.0f, 0.0f, 0.0f);
+	bool firstMouse = true;
+	bool lampStatus[4];
+	bool lampOn = true;
+	bool skyOn = true;
 };
-
