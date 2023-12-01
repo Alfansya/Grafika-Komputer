@@ -1,18 +1,21 @@
 #pragma once
 
 #include "RenderEngine.h"
+#pragma once
+
+#include "RenderEngine.h"
 #include "Cube.h"
 #include "Shader.h"
 
 class Application :
-    public RenderEngine
+	public RenderEngine
 {
 public:
-    Application();
-    ~Application();
+	Application();
+	~Application();
 private:
-	Shader *shader;
-	Cube* cube; 
+	Shader* shader;
+	Cube* cube;
 	float angle;
 	glm::vec3 viewPos;
 	double lastFrameTime = glfwGetTime();
@@ -21,7 +24,7 @@ private:
 	void setupLighting();
 	void UpdateCameraDirection(double xpos, double ypos);
 	virtual void Init();
-	virtual void DeInit(); 
+	virtual void DeInit();
 	virtual void Update(double deltaTime);
 	virtual void Render();
 	virtual void ProcessInput(GLFWwindow* window);
@@ -40,4 +43,5 @@ private:
 	bool lampStatus[4];
 	bool lampOn = true;
 	bool skyOn = true;
+	double lastLightToggled = 0;
 };
